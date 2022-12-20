@@ -3,31 +3,34 @@ using namespace std;
 
 int main() {
     
-    string name, movie, date;
+    string name, movie, date, word;
     int stu_id;
     
-    cout << "Fasai: " << "Sawadee ka...Can you tell me your name?\n";
+    cout << "Fahsai: " << "Sawadee ka...Can you tell me your name?\n";
     cout << "?????: ";
-    cin >> name;
-    cout << "Fasai: " << "Wow!!! " << name <<" is a really cool name.\n";
+    getline(cin,name);
+    cout << "Fahsai: " << "Wow!!! " << name <<" is a really cool name.\n";
     
-    cout << "Fasai: " << "I think you are an Engineering student. What is your student ID?\n";
+    cout << "Fahsai: " << "I think you are an Engineering student. What is your student ID?\n";
     cout << name << ": ";
     cin >> stu_id;
-    cout << "Fasai: " << "I think you may be GEAR " << (stu_id/10000000)-12 << ". I have a free movie ticket for you.\n";
-    cout << "Fasai: " << " Let's go to the cinema together!!!\n";
+    cin.ignore();
+    cout << "Fahsai: " << "I think you may be GEAR " << (stu_id/10000000)-12 << ". I have a free movie ticket for you.\n";
+    cout << "Fahsai: " << "Let's go to the cinema together!!!\n";
     
-    cout << "Fasai: " << "What movie do you want to watch?\n";
+    cout << "Fahsai: " << "What movie do you want to watch?\n";
     cout << name << ": ";
-    cin >> movie;
+    getline(cin,movie);
+    
    
-    cout << "Fasai: " << "So....which day are you free to go with me?\n";
+    cout << "Fahsai: " << "So....which day are you free to go with me?\n";
     cout << name << ": ";
-    cin >> date;
-    cout << "Fasai: " << date <<"....that is OK!!! I'm looking forward to watching " << movie <<" with you.\n";
+    getline(cin,date);
+    cout << "Fahsai: " << date << "....that is OK!!! I'm looking forward to watching " << movie <<" with you.\n";
     
-    cout << name << ": " << "May the Force be with you krub\n";
-    cout << "Fasai: " << "555+ see you "<< date << ". Bye Bye \(^ ^)/";
+    cout << name << ": ";
+    getline(cin,word);
+    cout << "Fahsai: " << "555+ see you "<< date << ". Bye Bye \\(^ ^)/";
     
     return 0;
 }
